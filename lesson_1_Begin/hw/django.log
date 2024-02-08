@@ -1,0 +1,23 @@
+INFO Посетили главную страницу
+INFO "GET / HTTP/1.1" 200 605
+INFO Посетили страницу About
+INFO "GET /about/ HTTP/1.1" 200 883
+INFO Посетили главную страницу
+INFO "GET / HTTP/1.1" 200 605
+INFO Посетили страницу About
+INFO "GET /about/ HTTP/1.1" 200 883
+INFO Посетили главную страницу
+INFO "GET / HTTP/1.1" 200 605
+INFO Посетили главную страницу
+INFO "GET / HTTP/1.1" 200 605
+INFO Посетили главную страницу
+INFO "GET / HTTP/1.1" 200 605
+INFO Watching for file changes with StatReloader
+INFO Посетили страницу About
+INFO "GET /about/ HTTP/1.1" 200 883
+INFO Посетили страницу About
+INFO "GET /about/ HTTP/1.1" 200 883
+INFO Посетили страницу About
+INFO "GET /about/ HTTP/1.1" 200 883
+INFO Посетили главную страницу
+INFO "GET / HTTP/1.1" 200 605
