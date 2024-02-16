@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = 'Create products'
 
     def add_arguments(self, parser):
-        parser.add_argument('count', type=int, help='Product ID')
+        parser.add_argument('count', type=int, help='Product count')
 
     def handle(self, *args, **options):
         count = options.get('count')

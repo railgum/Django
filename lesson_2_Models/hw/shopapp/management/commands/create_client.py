@@ -8,7 +8,7 @@ class Command(BaseCommand):
     help = 'Create clients'
 
     def add_arguments(self, parser):
-        parser.add_argument('count', type=int, help='Client ID')
+        parser.add_argument('count', type=int, help='Client count')
 
     def handle(self, *args, **options):
         count = options.get('count')
