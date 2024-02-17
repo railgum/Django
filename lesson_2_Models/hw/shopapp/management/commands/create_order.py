@@ -11,18 +11,16 @@ class Command(BaseCommand):
         parser.add_argument('id', type=int, help='Client ID')
 
     def handle(self, *args, **options):
-        products = Product.objects.all()
+        products_ord = Product.objects.all()
         pk = options.get('id')
         order = Order(
             client_id=pk,
-            amount=100,
         )
-        print(products.filter(pk=order.products).aggregate(Sum('price')))
         order.save()
-        # amount = 0
         for _ in range(1, randint(1, 5)):
-            order.products_id.add(choice(products.pk))
-            self.stdout.write(order)
-            # amount += order.products.price
-        # order.amount = products.filter(pk=order.products_id).aggregate(Sum('price'))
+            order.products.add(choice(products_ord))
+        # amount = order.products.all().aggregate(Sum('price'))
+        amount = order.products.all().annotate(amount=Sum('price'))
+        print(amount[0].amount)
+        order.amount = amount[0].amount
         order.save()
