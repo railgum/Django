@@ -8,19 +8,19 @@ class Command(BaseCommand):
     help = 'Create orders'
 
     def add_arguments(self, parser):
-        parser.add_argument('id', type=int, help='Client ID')
+        parser.add_argument('count', type=int, help='Count orders')
 
     def handle(self, *args, **options):
         products_ord = Product.objects.all()
-        pk = options.get('id')
-        order = Order(
-            client_id=pk,
-        )
-        order.save()
-        for _ in range(1, randint(1, 5)):
-            order.products.add(choice(products_ord))
-        # amount = order.products.all().aggregate(Sum('price'))
-        amount = order.products.all().annotate(amount=Sum('price'))
-        print(amount[0].amount)
-        order.amount = amount[0].amount
-        order.save()
+        count = options.get('count')
+        for i in range(1, count + 1):
+            order = Order(
+                client_id=randint(1, Client.objects.count()),
+            )
+            order.save()
+            for _ in range(1, randint(1, 5)):
+                order.products.add(choice(products_ord))
+                amount = order.products.all().annotate(amount=Sum('price'))
+                print(amount[0].amount)
+                order.amount = amount[0].amount
+            order.save()
