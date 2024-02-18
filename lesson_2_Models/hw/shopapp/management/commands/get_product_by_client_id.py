@@ -11,7 +11,7 @@ class Command(BaseCommand):
         pk = options.get('pk')
         client = Client.objects.filter(pk=pk).first()
         orders = Order.objects.filter(client_id=client.id).all()
-        # products = Order.objects.filter(client_id=pk)
-        # products = Product.objects.filter(id=orders.id=client.id))
-        self.stdout.write(f'{orders}')
-
+        products_order_id = []
+        for order in orders:
+            products_order_id.append(order.products.all().values("title"))
+        self.stdout.write(f'{products_order_id}')
