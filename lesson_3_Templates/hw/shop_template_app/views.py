@@ -50,7 +50,9 @@ def orders_by_date(request, client_id):
     return render(
         request,
         'shop_template_app/orders_by_date.html',
-        {'orders_week': products_last_week,
-         'orders_month': products_last_month,
-         'orders_year': products_last_year, }
+        {
+            'orders_week': set(products_last_week),
+            'orders_month': set(products_last_month),
+            'orders_year': set(products_last_year),
+        }
     )
