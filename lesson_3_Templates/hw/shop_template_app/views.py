@@ -43,10 +43,6 @@ def orders_by_date(request, client_id):
     products_last_week = orders_last_week.values_list("products__title")
     products_last_month = orders_last_month.values_list("products__title")
     products_last_year = orders_last_year.values_list("products__title")
-
-    print(products_last_week)
-    print(products_last_month)
-    print(products_last_year)
     return render(
         request,
         'shop_template_app/orders_by_date.html',
