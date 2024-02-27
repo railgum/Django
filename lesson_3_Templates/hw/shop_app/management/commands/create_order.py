@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from random import choice, randint
 from django.db.models import Sum
-from shop_template_app.models import Client, Product, Order
+from shop_app.models import Client, Product, Order
 
 
 
