@@ -65,9 +65,9 @@ def change_product_form(request, product_id):
             alter_product.image = image
             alter_product.save()
 
-            return redirect('product_form', product_id)
+            return redirect('index')
     else:
-        product_form = ProductForm()
+        product_form = ProductForm(instance=alter_product)
         image_form = ImageForm()
 
     return render(
