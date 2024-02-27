@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from shop_template_app.models import Client
+from shop_app.models import Client
 
 class Command(BaseCommand):
     help = 'Update clients'

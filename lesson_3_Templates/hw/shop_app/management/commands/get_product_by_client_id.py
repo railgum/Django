@@ -1,5 +1,5 @@
 from django.core.management.base import BaseCommand
-from shop_template_app.models import Order, Client, Product
+from shop_app.models import Order, Client, Product
 
 class Command(BaseCommand):
     help = 'Get client products'

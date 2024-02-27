@@ -1,7 +1,7 @@
 from django.core.management.base import BaseCommand
 from django.utils import lorem_ipsum
 import random
-from shop_template_app.models import Product
+from shop_app.models import Product
 
 
 class Command(BaseCommand):

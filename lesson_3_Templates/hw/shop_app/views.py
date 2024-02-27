@@ -23,7 +23,7 @@ def client_all_orders(request, user_id):
         products_list.append(order.products.values_list("title"))
     return render(
         request,
-        'shop_template_app/show_orders.html',
+        'shop_app/show_orders.html',
         {'client': client, 'pl': products_list, 'orders': orders}
     )
 
@@ -45,7 +45,7 @@ def orders_by_date(request, client_id):
     products_last_year = orders_last_year.values_list("products__title")
     return render(
         request,
-        'shop_template_app/orders_by_date.html',
+        'shop_app/orders_by_date.html',
         {
             'orders_week': set(products_last_week),
             'orders_month': set(products_last_month),
