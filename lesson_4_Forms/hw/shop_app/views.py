@@ -8,7 +8,7 @@ from .forms import *
 
 def index(request):
     context = {"name": "Rail"}
-    return render(request, "shop_app/index.html", context)
+    return render(request, "shop_app/start.html", context)
 
 
 def client_all_orders(request, user_id):

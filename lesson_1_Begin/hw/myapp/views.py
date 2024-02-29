@@ -7,7 +7,7 @@ logger = logging.getLogger(__name__)
 
 def index(request):
     logger.info(f'Посетили главную страницу')
-    return render(request, 'index.html')
+    return render(request, 'start.html')
 
 
 def about(request):
