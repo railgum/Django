@@ -24,11 +24,17 @@ class ClientAdmin(admin.ModelAdmin):
     ]
 
 
+@admin.action(description='Обнулить количество')
+def reset_quantity(modeladmin, request, queryset):
+    queryset.update(quantity=0)
+
+
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
     list_display = ['title', 'quantity', 'price']
     list_filter = ['add_date', ]
     search_fields = ['description']
+    actions = [reset_quantity]
     fieldsets = [
         (
             'Основная информация', {
