@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+<!--{% load static %}-->
+
+{% block title %}Изменить продукт{% endblock %}
+
+{% block content %}
+<div class="change_product">
+    <div class="alter_product">
+        <h3>Название: {{ alter_product.title }}</h3>
+        <p class="description">Описание:<br> {{ alter_product.description }}</p>
+        <p>Цена: {{ alter_product.price }}</p>
+        <p>Количество: {{ alter_product.quantity }}</p>
+        <p>Дата добавления: {{ alter_product.add_date }}</p>
+        <img src="{{ MEDIA_URL }}{{ alter_product.image }}" width="400" height="300">
+    </div>
+    <div class="form_to_change">
+        <h3>Изменить карточку товара</h3>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ product_form.as_p }}
+            {{ image_form.as_p }}
+            <input type="submit" value="Изменить">
+        </form>
+    </div>
+</div>
+{% endblock %}
+
