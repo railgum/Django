@@ -28,3 +28,22 @@ form input {
     margin-top: 20px;
 }
 
+.container {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.image-wrap,
+.header,
+h3 {
+    text-align: center;
+}
+.about {
+    margin-left: 30px;
+}
+li {
+    padding-top: 20px;
+    list-style-type: circle;
+}
+

@@ -11,6 +11,22 @@ def index(request):
     return render(request, "shop_app/index.html", context)
 
 
+def shop(request):
+    context = {"name": "Интернет-магазин"}
+    return render(request, "shop_app/elastico.html", context)
+
+
+# def add_client_form(request):
+#     clients =
+
+def log_in(request):
+    pass
+
+
+def log_out(request):
+    return redirect('index')
+
+
 def client_all_orders(request, user_id):
     client = get_object_or_404(Client, pk=user_id)
     orders = Order.objects.filter(client_id=client.id)
