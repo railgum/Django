@@ -20,11 +20,8 @@ def shop(request):
 #     clients =
 
 def log_in(request):
+    # registration form
     pass
-
-
-def log_out(request):
-    return redirect('index')
 
 
 def client_all_orders(request, user_id):

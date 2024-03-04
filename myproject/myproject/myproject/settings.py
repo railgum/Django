@@ -86,7 +86,8 @@ DATABASES = {
         'NAME': os.getenv('MYSQL_DBNAME'),  # 'NAME': 'railgum$default',
         'USER': os.getenv('MYSQL_USER'),  # 'USER': 'railgum',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
-        'HOST': os.getenv('MYSQL_HOST'),  # 'HOST': 'railgum.mysql.pythonanywhere-services.com',
+        # 'HOST': os.getenv('MYSQL_HOST'),  # 'HOST': 'railgum.mysql.pythonanywhere-services.com',
+        'HOST': 'railgum.mysql.pythonanywhere-services.com',
         'OPTIONS': {
             'init_command': "SET NAMES 'utf8mb4';SET sql_mode = 'STRICT_TRANS_TABLES'",
             'charset': 'utf8mb4',
@@ -126,7 +127,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static/'
 
 MEDIA_URL = 'media/'

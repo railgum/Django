@@ -79,3 +79,7 @@ def change_product_form(request, product_id):
             'image_form': image_form,
         }
     )
+
+def show_products(request):
+    products = get_object_or_404(Product)
+    return render(request, 'show_products.html', products)
