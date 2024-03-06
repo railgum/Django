@@ -83,8 +83,8 @@ WSGI_APPLICATION = 'hw.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'mastembek$default',
-        'USER': 'mastembek',
+        'NAME': 'railgum$shop_app',
+        'USER': 'railgum',
         'PASSWORD': os.getenv('MYSQL_PASSWORD'),
         'HOST': 'mastembek.mysql.pythonanywhere-services.com',
         'OPTIONS': {
