@@ -13,8 +13,8 @@ env.bak/
 venv.bak/
 instance/
 wsgi.py
-*/*/media/
-*/*/static/
-*/*.sqlite3
+**/media/
+**/static/
+**/*.sqlite3
 */*.log
 */*.pyc
