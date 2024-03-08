@@ -12,7 +12,7 @@ def index(request):
 
 
 def shop(request):
-    context = {"name": "Интернет-магазин"}
+    context = {"name": "Эластико"}
     return render(request, "shop_app/elastico.html", context)
 
 
