@@ -30,7 +30,15 @@ def shop(request):
 
 def log_in(request):
     # registration form
-    pass
+    products = []
+    for i in range(1, 8):
+        # products.append(choice(products_all))
+        products.append(get_object_or_404(Product, pk=i))
+    context = {
+        "title": "Эластико",
+        "products": products,
+    }
+    return render(request, "shop_app/example.html", context)
 
 
 def client_all_orders(request, user_id):
