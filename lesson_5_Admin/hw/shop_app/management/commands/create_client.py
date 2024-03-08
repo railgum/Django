@@ -16,7 +16,7 @@ class Command(BaseCommand):
             client = Client(
                 name=f'Name{i}',
                 email=f'name{i}@mail.mail',
-                phone=f'8-{randint(100, 999)}-{randint(100, 999)}-{randint(1000, 9999)}',
+                phone=f'8-{randint(100, 999)}{randint(100, 999)}{randint(1000, 9999)}',
                 address=lorem_ipsum.words(5, common=False).capitalize(),
                 reg_date=f'2020-{randint(0, 1)}{randint(1, 2)}-{randint(10, 28)}',
             )
