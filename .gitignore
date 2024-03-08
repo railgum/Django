@@ -14,7 +14,7 @@ venv.bak/
 instance/
 wsgi.py
 **/media/
-#**/static/
+**/static/
 **/*.sqlite3
 */*.log
 */*.pyc
