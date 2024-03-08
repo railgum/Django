@@ -17,5 +17,3 @@ class ProductForm(forms.ModelForm):
             'quantity': 'Количество',
             'add_date': 'Дата изменения',
         }
-class IdForm(forms.Form):
-    product_id = forms.IntegerField(label='Введите ID продукта')
