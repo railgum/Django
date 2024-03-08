@@ -11,29 +11,29 @@
 
     </div>
     <div class="product">
-        {% for i in products %}
+        {% for product in products %}
         <div class="white_block">
-            <a href="#"><img src="{{ MEDIA_URL }}{{ 'img/bird.jpg' }}" alt="foto"></a>
+            <a href="#"><img src="{{ MEDIA_URL }}{{ product.image }}" alt="photo"></a>
             <input class="add" type="submit" name="many" value="В корзину">
             <span class="many">2000 &#8381;</span>
         </div>
         {% endfor %}
 
-<!--        <div class="white_block">-->
-<!--            <a href="#"><img src="{% static 'img/tiger.jpg' %}" alt="foto"></a>-->
-<!--            <input class="add" type="submit" name="many" value="В корзину">-->
-<!--            <span class="many">6700 &#8381;</span>-->
-<!--        </div>-->
-<!--        <div class="white_block">-->
-<!--            <a href="#"><img src="{% static 'img/zub.jpg' %}" alt="foto"></a>-->
-<!--            <input class="add" type="submit" name="many" value="В корзину">-->
-<!--            <span class="many">8000 &#8381;</span>-->
-<!--        </div>-->
-<!--        <div class="white_block last">-->
-<!--            <a href="#"><img src="{% static 'img/elefant.jpg' %}" alt="foto"></a>-->
-<!--            <input class="add" type="submit" name="many" value="В корзину">-->
-<!--            <span class="many">5600 &#8381;</span>-->
-<!--        </div>-->
+        <!--        <div class="white_block">-->
+        <!--            <a href="#"><img src="{% static 'img/tiger.jpg' %}" alt="foto"></a>-->
+        <!--            <input class="add" type="submit" name="many" value="В корзину">-->
+        <!--            <span class="many">6700 &#8381;</span>-->
+        <!--        </div>-->
+        <!--        <div class="white_block">-->
+        <!--            <a href="#"><img src="{% static 'img/zub.jpg' %}" alt="foto"></a>-->
+        <!--            <input class="add" type="submit" name="many" value="В корзину">-->
+        <!--            <span class="many">8000 &#8381;</span>-->
+        <!--        </div>-->
+        <!--        <div class="white_block last">-->
+        <!--            <a href="#"><img src="{% static 'img/elefant.jpg' %}" alt="foto"></a>-->
+        <!--            <input class="add" type="submit" name="many" value="В корзину">-->
+        <!--            <span class="many">5600 &#8381;</span>-->
+        <!--        </div>-->
     </div>
 </div>
 <div class="clr">

@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from .models import Client, Product, Order
 from datetime import date, timedelta
 from .forms import *
+from random import choice
 
 
 def index(request):
@@ -12,7 +13,11 @@ def index(request):
 
 
 def shop(request):
-    products = Product.objects.all()
+    # products_all = Product.objects.all()
+    products = []
+    for i in range(1, 8):
+        # products.append(choice(products_all))
+        products.append(get_object_or_404(Product, pk=i))
     context = {"title": "Эластико",
                "products": products, }
     return render(request, "shop_app/elastico.html", context)
