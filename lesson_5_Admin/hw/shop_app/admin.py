@@ -31,7 +31,7 @@ def reset_quantity(modeladmin, request, queryset):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['title', 'quantity', 'price']
+    list_display = ['title', 'quantity', 'price', 'image', ]
     list_filter = ['add_date', ]
     search_fields = ['description']
     actions = [reset_quantity]
