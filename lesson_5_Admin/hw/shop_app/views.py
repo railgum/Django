@@ -15,7 +15,7 @@ def index(request):
 def shop(request):
     # products_all = Product.objects.all()
     products = []
-    for i in range(1, 8):
+    for i in range(1, 4):
         # products.append(choice(products_all))
         products.append(get_object_or_404(Product, pk=i))
     context = {
@@ -30,15 +30,8 @@ def shop(request):
 
 def log_in(request):
     # registration form
-    products = []
-    for i in range(1, 8):
-        # products.append(choice(products_all))
-        products.append(get_object_or_404(Product, pk=i))
-    context = {
-        "title": "Эластико",
-        "products": products,
-    }
-    return render(request, "shop_app/example.html", context)
+    context = {}
+    return render(request, "shop_app/reg_form.html", context)
 
 
 def client_all_orders(request, user_id):
