@@ -15,7 +15,7 @@ def index(request):
 def shop(request):
     # products_all = Product.objects.all()
     products = []
-    for i in range(1, 4):
+    for i in range(1, 5):
         # products.append(choice(products_all))
         products.append(get_object_or_404(Product, pk=i))
     context = {
