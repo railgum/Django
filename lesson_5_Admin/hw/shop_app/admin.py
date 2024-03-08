@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.utils.safestring import mark_safe
 from .models import Client, Product, Order
 
 
@@ -31,7 +32,7 @@ def reset_quantity(modeladmin, request, queryset):
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['title', 'image', 'quantity', 'price', ]
+    list_display = ['title', 'quantity', 'price', 'get_photo', ]
     list_filter = ['add_date', ]
     search_fields = ['description']
     actions = [reset_quantity]
@@ -48,6 +49,12 @@ class ProductAdmin(admin.ModelAdmin):
             }
         )
     ]
+
+    def get_photo(self, object):
+        if object.image:
+            return mark_safe(f"<img src='{object.image.url}' width=50>")
+        else:
+            return "Нет фото"
 
 
 @admin.register(Order)
