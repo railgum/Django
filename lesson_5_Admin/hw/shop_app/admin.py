@@ -40,7 +40,7 @@ class ProductAdmin(admin.ModelAdmin):
     fieldsets = [
         (
             'Основная информация', {
-                'fields': ['title', 'quantity', 'image', 'get_photo', ],
+                'fields': ['title', 'quantity', 'get_photo', 'image', ],
             }
         ),
         (
