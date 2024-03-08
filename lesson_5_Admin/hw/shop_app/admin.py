@@ -39,7 +39,7 @@ class ProductAdmin(admin.ModelAdmin):
     fieldsets = [
         (
             'Основная информация', {
-                'fields': ['title', 'quantity'],
+                'fields': ['title', 'quantity', 'image'],
             }
         ),
         (
@@ -55,6 +55,8 @@ class ProductAdmin(admin.ModelAdmin):
             return mark_safe(f"<img src='{object.image.url}' width=50>")
         else:
             return "Нет фото"
+
+    get_photo.short_description = "Изображение"
 
 
 @admin.register(Order)
