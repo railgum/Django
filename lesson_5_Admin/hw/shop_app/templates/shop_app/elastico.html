@@ -13,49 +13,49 @@
     <div class="product">
         {% for product in products %}
         <div class="white_block">
-            <!--            <a href="#"><img src='{{ product.image.url }}' alt="photo"></a>-->
+            <!--            <a href="#"><img src='{{ product }}' alt="photo"></a>-->
             <!--            <input class="add" type="submit" name="many" value="В корзину">-->
             <!--            <span class="many">2000 &#8381;</span>-->
             product
-            <!--        </div>-->
+        </div>
         {% endfor %}
 
-            <!--        <div class="white_block">-->
-            <!--            <a href="#"><img src="{% static 'img/tiger.jpg' %}" alt="foto"></a>-->
-            <!--            <input class="add" type="submit" name="many" value="В корзину">-->
-            <!--            <span class="many">6700 &#8381;</span>-->
-            <!--        </div>-->
-            <!--        <div class="white_block">-->
-            <!--            <a href="#"><img src="{% static 'img/zub.jpg' %}" alt="foto"></a>-->
-            <!--            <input class="add" type="submit" name="many" value="В корзину">-->
-            <!--            <span class="many">8000 &#8381;</span>-->
-            <!--        </div>-->
-            <!--        <div class="white_block last">-->
-            <!--            <a href="#"><img src="{% static 'img/elefant.jpg' %}" alt="foto"></a>-->
-            <!--            <input class="add" type="submit" name="many" value="В корзину">-->
-            <!--            <span class="many">5600 &#8381;</span>-->
-            <!--        </div>-->
-        </div>
+        <!--        <div class="white_block">-->
+        <!--            <a href="#"><img src="{% static 'img/tiger.jpg' %}" alt="foto"></a>-->
+        <!--            <input class="add" type="submit" name="many" value="В корзину">-->
+        <!--            <span class="many">6700 &#8381;</span>-->
+        <!--        </div>-->
+        <!--        <div class="white_block">-->
+        <!--            <a href="#"><img src="{% static 'img/zub.jpg' %}" alt="foto"></a>-->
+        <!--            <input class="add" type="submit" name="many" value="В корзину">-->
+        <!--            <span class="many">8000 &#8381;</span>-->
+        <!--        </div>-->
+        <!--        <div class="white_block last">-->
+        <!--            <a href="#"><img src="{% static 'img/elefant.jpg' %}" alt="foto"></a>-->
+        <!--            <input class="add" type="submit" name="many" value="В корзину">-->
+        <!--            <span class="many">5600 &#8381;</span>-->
+        <!--        </div>-->
     </div>
-    <div class="clr">
-        <div class="brands">
-            <a href="http://www.lada.ru/" target=_blank><img src="{% static 'img/lada.jpg' %}"
-                                                             alt="ВАЗ"></a>
-        </div>
-        <div class="brands">
-            <a href="http://www.uaz.ru/" target=_blank><img src="{% static 'img/uas.jpg' %}"
-                                                            alt="УАЗ"></a>
-        </div>
-        <div class="brands">
-            <a href="http://uzdaewoo.ru/" target=_blank><img src="{% static 'img/daewoo.jpg' %}"
-                                                             alt="ДЭУ"></a>
-        </div>
-        <div class="brands">
-            <a href="http://www.chevrolet.ru/" target=_blank><img
-                    src="{% static 'img/chevrolet.jpg' %}"
-                    alt="Шевроле"></a>
-        </div>
+</div>
+<div class="clr">
+    <div class="brands">
+        <a href="http://www.lada.ru/" target=_blank><img src="{% static 'img/lada.jpg' %}"
+                                                         alt="ВАЗ"></a>
     </div>
-    <!-- <script src="script/bootstrap.min.js"></script> -->
+    <div class="brands">
+        <a href="http://www.uaz.ru/" target=_blank><img src="{% static 'img/uas.jpg' %}"
+                                                        alt="УАЗ"></a>
+    </div>
+    <div class="brands">
+        <a href="http://uzdaewoo.ru/" target=_blank><img src="{% static 'img/daewoo.jpg' %}"
+                                                         alt="ДЭУ"></a>
+    </div>
+    <div class="brands">
+        <a href="http://www.chevrolet.ru/" target=_blank><img
+                src="{% static 'img/chevrolet.jpg' %}"
+                alt="Шевроле"></a>
+    </div>
+</div>
+<!-- <script src="script/bootstrap.min.js"></script> -->
 
-    {% endblock %}
+{% endblock %}
