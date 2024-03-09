@@ -13,10 +13,9 @@
     <div class="product">
         {% for product in products %}
         <div class="white_block">
-            <!--            <a href="#"><img src='{{ product }}' alt="photo"></a>-->
-            <!--            <input class="add" type="submit" name="many" value="В корзину">-->
-            <!--            <span class="many">2000 &#8381;</span>-->
-            {{ product.image }}
+            <a href="#"><img src='{{ MEDIA_URL }}{{ product.image }}' alt="photo"></a>
+            <input class="add" type="submit" name="many" value="В корзину">
+            <span class="many">2000 &#8381;</span>
         </div>
         {% endfor %}
 
