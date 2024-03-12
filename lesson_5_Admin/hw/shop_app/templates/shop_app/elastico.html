@@ -14,7 +14,6 @@
         {% for product in products %}
         <div class="white_block">
             <p>{{ product.title }}</p>
-<!--            <a href="#"><img src='{{ MEDIA_URL }}{{ product.image }}' alt="photo"></a>-->
             <a href="#"><img src='{{ product.image.url }}' alt="photo"></a>
             <input class="add" type="submit" name="many" value="В корзину">
             <span class="many">{{ product.price }} &#8381;</span>
